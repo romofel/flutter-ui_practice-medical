@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppPalette {
   static const scaffoldBackgroundColor = Color(0xffFAFAFA);
@@ -39,4 +40,9 @@ class AppPalette {
   ];
   static const socialStarColor = Color(0xffFFA41C);
   static const socialHeartColor = Color(0xffFF2C6C);
+}
+
+class Typography {
+  static const darkColor = Color(0xff02100F);
+  static final style = GoogleFonts.montserrat();
 }
