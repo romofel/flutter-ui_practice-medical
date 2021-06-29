@@ -44,5 +44,5 @@ class AppPalette {
 
 class Typography {
   static const darkColor = Color(0xff02100F);
-  static final style = GoogleFonts.montserrat();
+  static final montserrat = GoogleFonts.montserrat();
 }
