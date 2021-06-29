@@ -1,3 +1,4 @@
+import 'package:app/constants.dart';
 import 'package:app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: AppPalette.scaffoldBackgroundColor,
       ),
       home: const HomeScreen(),
     );
