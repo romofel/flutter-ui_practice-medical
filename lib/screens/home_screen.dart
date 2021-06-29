@@ -18,12 +18,15 @@ class HomeScreen extends StatelessWidget {
                   'Welcome back',
                   style: AppTypography.montserrat.copyWith(
                     color: AppTypography.darkColor,
+                    fontSize: 12,
                   ),
                 ),
                 Text(
                   'Jacob Jones',
                   style: AppTypography.montserrat.copyWith(
                     color: AppTypography.darkColor,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
               ],
