@@ -42,7 +42,7 @@ class AppPalette {
   static const socialHeartColor = Color(0xffFF2C6C);
 }
 
-class Typography {
+class AppTypography {
   static const darkColor = Color(0xff02100F);
   static final montserrat = GoogleFonts.montserrat();
 }
