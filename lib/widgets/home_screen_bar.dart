@@ -62,8 +62,14 @@ class HomeScreenBar extends SliverPersistentHeaderDelegate {
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Colors.white,
-                  border: OutlineInputBorder(
+                  border: const OutlineInputBorder(
                     borderSide: BorderSide.none,
+                  ),
+                  hintText: 'Search Doctor',
+                  hintStyle: AppTypography.montserrat.copyWith(
+                    color: const Color(0x8002100F),
+                    fontSize: 12,
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
               ),
