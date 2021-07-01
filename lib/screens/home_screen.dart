@@ -145,7 +145,38 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-          )
+          ),
+          SliverToBoxAdapter(
+            child: Container(
+              padding: const EdgeInsets.only(left: 24),
+              height: 88,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Container(
+                    width: 80,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      children: [
+                        Container(
+                          width: 46,
+                          height: 46,
+                          decoration: BoxDecoration(
+                            gradient:
+                                AppPalette.categoryBackgrounds['cardiology'],
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );
