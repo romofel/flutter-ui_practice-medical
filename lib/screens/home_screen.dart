@@ -18,9 +18,12 @@ class HomeScreen extends StatelessWidget {
             child: Container(
               height: 157,
               padding: const EdgeInsets.only(left: 24),
-              child: ListView.builder(
+              child: ListView.separated(
                 scrollDirection: Axis.horizontal,
-                itemCount: 1,
+                itemCount: 3,
+                separatorBuilder: (context, index) {
+                  return const SizedBox(width: 24);
+                },
                 itemBuilder: (BuildContext context, int index) {
                   return Container(
                     width: 314,
