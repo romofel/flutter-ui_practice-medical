@@ -59,11 +59,20 @@ class HomeScreen extends StatelessWidget {
                                 ),
                               ),
                               Container(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 16, vertical: 8),
                                 decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10),
                                 ),
-                                child: Text('Get Appointment'),
+                                child: const Text(
+                                  'Get Appointment',
+                                  style: TextStyle(
+                                    color: Color(0xb302100F),
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
                               ),
                             ],
                           ),
