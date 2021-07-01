@@ -235,13 +235,20 @@ class HomeScreen extends StatelessWidget {
     return Container(
       width: 156,
       height: 194,
+      padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
         children: [
-          Image.asset('assets/images/home_screen/doctor1@3x.png'),
+          Container(
+              width: 140,
+              decoration: BoxDecoration(
+                color: AppPalette.doctorCardBackgroundColors[0],
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Image.asset('assets/images/home_screen/doctor1@3x.png')),
           const Text('Dr. Jenny Wilson'),
           const Text('Specialist Dentist'),
           Row(
