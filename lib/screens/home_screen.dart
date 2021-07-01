@@ -207,6 +207,18 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
+          SliverPadding(
+            padding: const EdgeInsets.symmetric(horizontal: 24),
+            sliver: SliverFillRemaining(
+              child: Container(
+                color: Colors.amber,
+                child: GridView.count(
+                  crossAxisCount: 2,
+                  children: [],
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
