@@ -35,12 +35,6 @@ class HomeScreenBar extends SliverPersistentHeaderDelegate {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      Text(
-                        '$shrinkOffset',
-                        style: AppTypography.montserrat.copyWith(
-                          color: AppTypography.darkColor,
-                        ),
-                      ),
                     ],
                   ),
                   Container(
@@ -62,14 +56,20 @@ class HomeScreenBar extends SliverPersistentHeaderDelegate {
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Colors.white,
-                  border: const OutlineInputBorder(
+                  border: OutlineInputBorder(
                     borderSide: BorderSide.none,
+                    borderRadius: BorderRadius.circular(10),
                   ),
                   hintText: 'Search Doctor',
                   hintStyle: AppTypography.montserrat.copyWith(
                     color: const Color(0x8002100F),
                     fontSize: 12,
                     fontWeight: FontWeight.w400,
+                  ),
+                  prefixIcon: const Icon(
+                    Icons.search,
+                    color: Color(0x80000000),
+                    size: 22,
                   ),
                 ),
               ),
@@ -84,7 +84,7 @@ class HomeScreenBar extends SliverPersistentHeaderDelegate {
   double get maxExtent => 200;
 
   @override
-  double get minExtent => 100;
+  double get minExtent => 200;
 
   @override
   bool shouldRebuild(covariant SliverPersistentHeaderDelegate oldDelegate) {
