@@ -218,10 +218,54 @@ class HomeScreen extends StatelessWidget {
                 spacing: 12,
                 runSpacing: 16,
                 children: [
-                  buildDoctorCardOption(),
-                  buildDoctorCardOption(),
-                  buildDoctorCardOption(),
-                  buildDoctorCardOption(),
+                  buildDoctorCardOption(
+                    image: 'assets/images/home_screen/doctor1@3x.png',
+                    colorType: 0,
+                  ),
+                  buildDoctorCardOption(
+                    image: 'assets/images/home_screen/doctor2@3x.png',
+                    colorType: 1,
+                  ),
+                  buildDoctorCardOption(
+                    image: 'assets/images/home_screen/doctor1@3x.png',
+                    colorType: 0,
+                  ),
+                  buildDoctorCardOption(
+                    image: 'assets/images/home_screen/doctor2@3x.png',
+                    colorType: 1,
+                  ),
+                  buildDoctorCardOption(
+                    image: 'assets/images/home_screen/doctor1@3x.png',
+                    colorType: 0,
+                  ),
+                  buildDoctorCardOption(
+                    image: 'assets/images/home_screen/doctor2@3x.png',
+                    colorType: 1,
+                  ),
+                  buildDoctorCardOption(
+                    image: 'assets/images/home_screen/doctor1@3x.png',
+                    colorType: 0,
+                  ),
+                  buildDoctorCardOption(
+                    image: 'assets/images/home_screen/doctor2@3x.png',
+                    colorType: 1,
+                  ),
+                  buildDoctorCardOption(
+                    image: 'assets/images/home_screen/doctor1@3x.png',
+                    colorType: 0,
+                  ),
+                  buildDoctorCardOption(
+                    image: 'assets/images/home_screen/doctor2@3x.png',
+                    colorType: 1,
+                  ),
+                  buildDoctorCardOption(
+                    image: 'assets/images/home_screen/doctor1@3x.png',
+                    colorType: 0,
+                  ),
+                  buildDoctorCardOption(
+                    image: 'assets/images/home_screen/doctor2@3x.png',
+                    colorType: 1,
+                  ),
                 ],
               ),
             ),
@@ -231,7 +275,10 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Container buildDoctorCardOption() {
+  Container buildDoctorCardOption({
+    required String image,
+    required int colorType,
+  }) {
     return Container(
       width: 156,
       height: 194,
@@ -246,10 +293,10 @@ class HomeScreen extends StatelessWidget {
           Container(
             width: 140,
             decoration: BoxDecoration(
-              color: AppPalette.doctorCardBackgroundColors[0],
+              color: AppPalette.doctorCardBackgroundColors[colorType],
               borderRadius: BorderRadius.circular(10),
             ),
-            child: Image.asset('assets/images/home_screen/doctor1@3x.png'),
+            child: Image.asset(image),
           ),
           const SizedBox(height: 12),
           const Text(
