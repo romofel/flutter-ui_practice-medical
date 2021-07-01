@@ -101,4 +101,20 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
+
+  Container buildIndicator(
+      {double height = 5,
+      double width = 5,
+      double radius = 5,
+      double opacity = .1}) {
+    return Container(
+      height: height,
+      width: width,
+      margin: const EdgeInsets.only(right: 8),
+      decoration: BoxDecoration(
+        color: const Color(0xff20BEB8).withOpacity(opacity),
+        borderRadius: BorderRadius.circular(radius),
+      ),
+    );
+  }
 }
