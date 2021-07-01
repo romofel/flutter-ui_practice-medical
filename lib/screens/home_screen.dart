@@ -49,18 +49,21 @@ class HomeScreen extends StatelessWidget {
                                     color: Color(0xffFBFF33),
                                   ),
                                 ),
+                                // const SizedBox(height: 4),
                                 const Text(
                                   'Dr. Leslie Alexander',
                                   style: TextStyle(
                                     color: Colors.white,
                                   ),
                                 ),
+                                const SizedBox(height: 4),
                                 const Text(
                                   'Hospital in San Diego',
                                   style: TextStyle(
                                     color: Color(0xb3FFFFFF),
                                   ),
                                 ),
+                                const Spacer(),
                                 Container(
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 16, vertical: 8),
