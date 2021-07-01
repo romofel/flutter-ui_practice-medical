@@ -268,10 +268,32 @@ class HomeScreen extends StatelessWidget {
           ),
           Row(
             children: const [
-              Icon(Icons.star_rounded),
-              Text('5.0'),
-              Text('(125 Reviews)'),
-              Icon(Icons.favorite_rounded),
+              Icon(
+                Icons.star_rounded,
+                color: AppPalette.socialStarColor,
+                size: 16,
+              ),
+              Text(
+                '5.0',
+                style: TextStyle(
+                  color: Color(0x9902100F),
+                  fontSize: 10,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              Text(
+                '(125 Reviews)',
+                style: TextStyle(
+                  color: Color(0x9902100F),
+                  fontSize: 10,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              Icon(
+                Icons.favorite_rounded,
+                color: AppPalette.socialHeartColor,
+                size: 16,
+              ),
             ],
           ),
         ],
