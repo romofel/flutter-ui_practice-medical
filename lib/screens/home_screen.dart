@@ -235,7 +235,7 @@ class HomeScreen extends StatelessWidget {
     return Container(
       width: 156,
       height: 194,
-      padding: const EdgeInsets.all(8),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
@@ -244,12 +244,14 @@ class HomeScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-              width: 140,
-              decoration: BoxDecoration(
-                color: AppPalette.doctorCardBackgroundColors[0],
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Image.asset('assets/images/home_screen/doctor1@3x.png')),
+            width: 140,
+            decoration: BoxDecoration(
+              color: AppPalette.doctorCardBackgroundColors[0],
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Image.asset('assets/images/home_screen/doctor1@3x.png'),
+          ),
+          const SizedBox(height: 12),
           const Text(
             'Dr. Jenny Wilson',
             style: TextStyle(
@@ -266,6 +268,7 @@ class HomeScreen extends StatelessWidget {
               fontWeight: FontWeight.w400,
             ),
           ),
+          const SizedBox(height: 4),
           Row(
             children: const [
               Icon(
@@ -273,6 +276,7 @@ class HomeScreen extends StatelessWidget {
                 color: AppPalette.socialStarColor,
                 size: 16,
               ),
+              SizedBox(width: 2),
               Text(
                 '5.0',
                 style: TextStyle(
@@ -281,6 +285,7 @@ class HomeScreen extends StatelessWidget {
                   fontWeight: FontWeight.w400,
                 ),
               ),
+              SizedBox(width: 4),
               Text(
                 '(125 Reviews)',
                 style: TextStyle(
