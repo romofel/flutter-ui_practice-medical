@@ -289,6 +289,7 @@ class HomeScreen extends StatelessWidget {
                   fontWeight: FontWeight.w400,
                 ),
               ),
+              Spacer(),
               Icon(
                 Icons.favorite_rounded,
                 color: AppPalette.socialHeartColor,
