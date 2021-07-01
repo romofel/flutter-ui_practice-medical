@@ -169,6 +169,13 @@ class HomeScreen extends StatelessWidget {
                                 AppPalette.categoryBackgrounds['cardiology'],
                             borderRadius: BorderRadius.circular(10),
                           ),
+                          child: Center(
+                            child: Image.asset(
+                              'assets/images/home_screen/heart_icon@3x.png',
+                              width: 23,
+                              height: 23,
+                            ),
+                          ),
                         ),
                       ],
                     ),
