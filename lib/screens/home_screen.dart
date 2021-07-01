@@ -27,6 +27,24 @@ class HomeScreen extends StatelessWidget {
                       gradient: AppPalette.heroBackgroundGradient,
                       borderRadius: BorderRadius.circular(10),
                     ),
+                    child: Row(
+                      children: [
+                        Image.asset(
+                          'assets/images/home_screen/hero_doctor@3x.png',
+                          fit: BoxFit.cover,
+                        ),
+                        Column(
+                          children: [
+                            Text('Heart Specialist'),
+                            Text('Dr. Leslie Alexander'),
+                            Text('Hospital in San Diego'),
+                            SizedBox(
+                              child: Text('Get Appointment'),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   );
                 },
               ),
