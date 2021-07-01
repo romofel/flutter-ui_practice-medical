@@ -14,6 +14,24 @@ class HomeScreen extends StatelessWidget {
             floating: false,
             delegate: HomeScreenBar(),
           ),
+          SliverToBoxAdapter(
+            child: SizedBox(
+              height: 157,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: 1,
+                itemBuilder: (BuildContext context, int index) {
+                  return Container(
+                    width: 314,
+                    decoration: BoxDecoration(
+                      gradient: AppPalette.heroBackgroundGradient,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  );
+                },
+              ),
+            ),
+          ),
         ],
       ),
     );
