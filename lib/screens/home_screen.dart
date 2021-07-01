@@ -39,26 +39,30 @@ class HomeScreen extends StatelessWidget {
                           flex: 2,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text(
+                            children: [
+                              const Text(
                                 'Heart Specialist',
                                 style: TextStyle(
                                   color: Color(0xffFBFF33),
                                 ),
                               ),
-                              Text(
+                              const Text(
                                 'Dr. Leslie Alexander',
                                 style: TextStyle(
                                   color: Colors.white,
                                 ),
                               ),
-                              Text(
+                              const Text(
                                 'Hospital in San Diego',
                                 style: TextStyle(
                                   color: Color(0xb3FFFFFF),
                                 ),
                               ),
-                              SizedBox(
+                              Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
                                 child: Text('Get Appointment'),
                               ),
                             ],
