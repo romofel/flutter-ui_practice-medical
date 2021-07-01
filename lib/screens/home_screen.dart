@@ -210,39 +210,42 @@ class HomeScreen extends StatelessWidget {
           SliverPadding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
             sliver: SliverFillRemaining(
-              child: Container(
-                color: Colors.amber,
-                child: Wrap(
-                  direction: Axis.horizontal,
-                  children: [
-                    Container(
-                      width: 156,
-                      height: 194,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                              'assets/images/home_screen/doctor1@3x.png'),
-                          const Text('Dr. Jenny Wilson'),
-                          const Text('Specialist Dentist'),
-                          Row(
-                            children: const [
-                              Icon(Icons.star_rounded),
-                              Text('5.0'),
-                              Text('(125 Reviews)'),
-                              Icon(Icons.favorite_rounded),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
+              child: Wrap(
+                direction: Axis.horizontal,
+                children: [
+                  buildDoctorCardOption(),
+                  buildDoctorCardOption(),
+                  buildDoctorCardOption(),
+                  buildDoctorCardOption(),
+                ],
               ),
             ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Container buildDoctorCardOption() {
+    return Container(
+      width: 156,
+      height: 194,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Column(
+        children: [
+          Image.asset('assets/images/home_screen/doctor1@3x.png'),
+          const Text('Dr. Jenny Wilson'),
+          const Text('Specialist Dentist'),
+          Row(
+            children: const [
+              Icon(Icons.star_rounded),
+              Text('5.0'),
+              Text('(125 Reviews)'),
+              Icon(Icons.favorite_rounded),
+            ],
           ),
         ],
       ),
