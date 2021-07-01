@@ -34,10 +34,25 @@ class HomeScreen extends StatelessWidget {
                           fit: BoxFit.cover,
                         ),
                         Column(
-                          children: [
-                            Text('Heart Specialist'),
-                            Text('Dr. Leslie Alexander'),
-                            Text('Hospital in San Diego'),
+                          children: const [
+                            Text(
+                              'Heart Specialist',
+                              style: TextStyle(
+                                color: Color(0xffFBFF33),
+                              ),
+                            ),
+                            Text(
+                              'Dr. Leslie Alexander',
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                            Text(
+                              'Hospital in San Diego',
+                              style: TextStyle(
+                                color: Color(0xb3FFFFFF),
+                              ),
+                            ),
                             SizedBox(
                               child: Text('Get Appointment'),
                             ),
