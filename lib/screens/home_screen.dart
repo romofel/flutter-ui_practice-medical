@@ -155,6 +155,7 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   Container(
                     width: 80,
+                    padding: const EdgeInsets.symmetric(vertical: 12),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
@@ -175,6 +176,15 @@ class HomeScreen extends StatelessWidget {
                               width: 23,
                               height: 23,
                             ),
+                          ),
+                        ),
+                        const SizedBox(height: 4),
+                        const Text(
+                          'Cardiology',
+                          style: TextStyle(
+                            color: Color(0xb302100F),
+                            fontSize: 11,
+                            fontWeight: FontWeight.w400,
                           ),
                         ),
                       ],
