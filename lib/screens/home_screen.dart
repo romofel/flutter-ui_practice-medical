@@ -15,8 +15,9 @@ class HomeScreen extends StatelessWidget {
             delegate: HomeScreenBar(),
           ),
           SliverToBoxAdapter(
-            child: SizedBox(
+            child: Container(
               height: 157,
+              padding: const EdgeInsets.only(left: 24),
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: 1,
