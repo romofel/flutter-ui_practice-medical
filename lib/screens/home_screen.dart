@@ -154,45 +154,71 @@ class HomeScreen extends StatelessWidget {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
-                  Container(
-                    width: 80,
-                    padding: const EdgeInsets.symmetric(vertical: 12),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Column(
-                      children: [
-                        Container(
-                          width: 46,
-                          height: 46,
-                          decoration: BoxDecoration(
-                            gradient:
-                                AppPalette.categoryBackgrounds['cardiology'],
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Center(
-                            child: Image.asset(
-                              'assets/images/home_screen/heart_icon@3x.png',
-                              width: 23,
-                              height: 23,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(height: 4),
-                        const Text(
-                          'Cardiology',
-                          style: TextStyle(
-                            color: Color(0xb302100F),
-                            fontSize: 11,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
+                  bulidCategoryOption(
+                    title: 'Cardiology',
+                    gradient: 'cardiology',
+                    image: 'assets/images/home_screen/heart_icon@3x.png',
+                  ),
+                  bulidCategoryOption(
+                    title: 'Neurology',
+                    gradient: 'neurology',
+                    image: 'assets/images/home_screen/brain_icon@3x.png',
+                  ),
+                  bulidCategoryOption(
+                    title: 'Dentist',
+                    gradient: 'dentist',
+                    image: 'assets/images/home_screen/tooth_icon@3x.png',
+                  ),
+                  bulidCategoryOption(
+                    title: 'Pulmonology',
+                    gradient: 'pulmonology',
+                    image: 'assets/images/home_screen/lung_icon@3x.png',
+                  ),
                 ],
               ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Container bulidCategoryOption({
+    required String title,
+    required String image,
+    required String gradient,
+  }) {
+    return Container(
+      width: 80,
+      padding: const EdgeInsets.symmetric(vertical: 12),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Column(
+        children: [
+          Container(
+            width: 46,
+            height: 46,
+            decoration: BoxDecoration(
+              gradient: AppPalette.categoryBackgrounds[gradient],
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Center(
+              child: Image.asset(
+                image,
+                width: 23,
+                height: 23,
+              ),
+            ),
+          ),
+          const SizedBox(height: 4),
+          Text(
+            title,
+            style: const TextStyle(
+              color: Color(0xb302100F),
+              fontSize: 11,
+              fontWeight: FontWeight.w400,
             ),
           ),
         ],
