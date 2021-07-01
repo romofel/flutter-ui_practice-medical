@@ -212,9 +212,34 @@ class HomeScreen extends StatelessWidget {
             sliver: SliverFillRemaining(
               child: Container(
                 color: Colors.amber,
-                child: GridView.count(
-                  crossAxisCount: 2,
-                  children: [],
+                child: Wrap(
+                  direction: Axis.horizontal,
+                  children: [
+                    Container(
+                      width: 156,
+                      height: 194,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Column(
+                        children: [
+                          Image.asset(
+                              'assets/images/home_screen/doctor1@3x.png'),
+                          const Text('Dr. Jenny Wilson'),
+                          const Text('Specialist Dentist'),
+                          Row(
+                            children: const [
+                              Icon(Icons.star_rounded),
+                              Text('5.0'),
+                              Text('(125 Reviews)'),
+                              Icon(Icons.favorite_rounded),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
