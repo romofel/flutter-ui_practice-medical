@@ -215,6 +215,8 @@ class HomeScreen extends StatelessWidget {
             sliver: SliverFillRemaining(
               child: Wrap(
                 direction: Axis.horizontal,
+                spacing: 12,
+                runSpacing: 16,
                 children: [
                   buildDoctorCardOption(),
                   buildDoctorCardOption(),
