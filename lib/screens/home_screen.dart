@@ -29,34 +29,40 @@ class HomeScreen extends StatelessWidget {
                     ),
                     child: Row(
                       children: [
-                        Image.asset(
-                          'assets/images/home_screen/hero_doctor@3x.png',
-                          fit: BoxFit.cover,
+                        Expanded(
+                          child: Image.asset(
+                            'assets/images/home_screen/hero_doctor@3x.png',
+                            fit: BoxFit.cover,
+                          ),
                         ),
-                        Column(
-                          children: const [
-                            Text(
-                              'Heart Specialist',
-                              style: TextStyle(
-                                color: Color(0xffFBFF33),
+                        Expanded(
+                          flex: 2,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const [
+                              Text(
+                                'Heart Specialist',
+                                style: TextStyle(
+                                  color: Color(0xffFBFF33),
+                                ),
                               ),
-                            ),
-                            Text(
-                              'Dr. Leslie Alexander',
-                              style: TextStyle(
-                                color: Colors.white,
+                              Text(
+                                'Dr. Leslie Alexander',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
                               ),
-                            ),
-                            Text(
-                              'Hospital in San Diego',
-                              style: TextStyle(
-                                color: Color(0xb3FFFFFF),
+                              Text(
+                                'Hospital in San Diego',
+                                style: TextStyle(
+                                  color: Color(0xb3FFFFFF),
+                                ),
                               ),
-                            ),
-                            SizedBox(
-                              child: Text('Get Appointment'),
-                            ),
-                          ],
+                              SizedBox(
+                                child: Text('Get Appointment'),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
