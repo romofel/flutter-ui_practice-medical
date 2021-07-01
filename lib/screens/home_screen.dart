@@ -125,9 +125,23 @@ class HomeScreen extends StatelessWidget {
             sliver: SliverToBoxAdapter(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('Categories'),
-                  Text('View All'),
+                children: const [
+                  Text(
+                    'Categories',
+                    style: TextStyle(
+                      color: Color(0xb302100F),
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  Text(
+                    'View All',
+                    style: TextStyle(
+                      color: Color(0x8002100F),
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
                 ],
               ),
             ),
