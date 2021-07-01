@@ -28,7 +28,9 @@ class HomeScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
+                        const SizedBox(width: 8),
                         Expanded(
                           child: Image.asset(
                             'assets/images/home_screen/hero_doctor@3x.png',
