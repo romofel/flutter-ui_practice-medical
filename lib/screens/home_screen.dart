@@ -250,8 +250,22 @@ class HomeScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Image.asset('assets/images/home_screen/doctor1@3x.png')),
-          const Text('Dr. Jenny Wilson'),
-          const Text('Specialist Dentist'),
+          const Text(
+            'Dr. Jenny Wilson',
+            style: TextStyle(
+              color: Color(0xb302100F),
+              fontSize: 12,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          const Text(
+            'Specialist Dentist',
+            style: TextStyle(
+              color: Color(0x9902100F),
+              fontSize: 12,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
           Row(
             children: const [
               Icon(Icons.star_rounded),
