@@ -5,8 +5,7 @@ class HomeScreenBar extends SliverPersistentHeaderDelegate {
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
-    return Container(
-      color: shrinkOffset < 50 ? Colors.transparent : Colors.red,
+    return SizedBox(
       child: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
