@@ -10,11 +10,10 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: CustomScrollView(
         slivers: [
-        SliverPersistentHeader(
-          pinned: true,
-          floating: false,
-          delegate: HomeScreenBar(),
-        ),
+          SliverPersistentHeader(
+            floating: false,
+            delegate: HomeScreenBar(),
+          ),
           // SliverPadding(
           //   padding: const EdgeInsets.symmetric(horizontal: 24),
           //   sliver: SliverAppBar(
