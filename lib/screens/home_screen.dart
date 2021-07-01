@@ -37,44 +37,48 @@ class HomeScreen extends StatelessWidget {
                         ),
                         Expanded(
                           flex: 2,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text(
-                                'Heart Specialist',
-                                style: TextStyle(
-                                  color: Color(0xffFBFF33),
-                                ),
-                              ),
-                              const Text(
-                                'Dr. Leslie Alexander',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                ),
-                              ),
-                              const Text(
-                                'Hospital in San Diego',
-                                style: TextStyle(
-                                  color: Color(0xb3FFFFFF),
-                                ),
-                              ),
-                              Container(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 16, vertical: 8),
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: const Text(
-                                  'Get Appointment',
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 24, vertical: 24),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  'Heart Specialist',
                                   style: TextStyle(
-                                    color: Color(0xb302100F),
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w500,
+                                    color: Color(0xffFBFF33),
                                   ),
                                 ),
-                              ),
-                            ],
+                                const Text(
+                                  'Dr. Leslie Alexander',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                const Text(
+                                  'Hospital in San Diego',
+                                  style: TextStyle(
+                                    color: Color(0xb3FFFFFF),
+                                  ),
+                                ),
+                                Container(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 16, vertical: 8),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: const Text(
+                                    'Get Appointment',
+                                    style: TextStyle(
+                                      color: Color(0xb302100F),
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],
