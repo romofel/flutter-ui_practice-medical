@@ -81,6 +81,7 @@ class DoctorScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+                  const SizedBox(height: 4),
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 24),
                     child: Text(
