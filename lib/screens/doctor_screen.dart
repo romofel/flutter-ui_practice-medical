@@ -33,6 +33,7 @@ class DoctorScreen extends StatelessWidget {
                 ),
               ),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 24),
                   Padding(
@@ -68,8 +69,15 @@ class DoctorScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const Text('Specialist Dentist'),
-                  const Text('Massachusetts General Hospital, Boston, MA'),
+                  const SizedBox(height: 8),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 24),
+                    child: Text('Specialist Dentist'),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 24),
+                    child: Text('Massachusetts General Hospital, Boston, MA'),
+                  ),
                   Row(),
                 ],
               ),
