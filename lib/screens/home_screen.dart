@@ -1,4 +1,5 @@
 import 'package:app/constants.dart';
+import 'package:app/screens/doctor_screen.dart';
 import 'package:app/widgets/home_screen_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -219,50 +220,62 @@ class HomeScreen extends StatelessWidget {
                 runSpacing: 16,
                 children: [
                   buildDoctorCardOption(
+                    context,
                     image: 'assets/images/home_screen/doctor1@3x.png',
                     colorType: 0,
                   ),
                   buildDoctorCardOption(
+                    context,
                     image: 'assets/images/home_screen/doctor2@3x.png',
                     colorType: 1,
                   ),
                   buildDoctorCardOption(
+                    context,
                     image: 'assets/images/home_screen/doctor1@3x.png',
                     colorType: 0,
                   ),
                   buildDoctorCardOption(
+                    context,
                     image: 'assets/images/home_screen/doctor2@3x.png',
                     colorType: 1,
                   ),
                   buildDoctorCardOption(
+                    context,
                     image: 'assets/images/home_screen/doctor1@3x.png',
                     colorType: 0,
                   ),
                   buildDoctorCardOption(
+                    context,
                     image: 'assets/images/home_screen/doctor2@3x.png',
                     colorType: 1,
                   ),
                   buildDoctorCardOption(
+                    context,
                     image: 'assets/images/home_screen/doctor1@3x.png',
                     colorType: 0,
                   ),
                   buildDoctorCardOption(
+                    context,
                     image: 'assets/images/home_screen/doctor2@3x.png',
                     colorType: 1,
                   ),
                   buildDoctorCardOption(
+                    context,
                     image: 'assets/images/home_screen/doctor1@3x.png',
                     colorType: 0,
                   ),
                   buildDoctorCardOption(
+                    context,
                     image: 'assets/images/home_screen/doctor2@3x.png',
                     colorType: 1,
                   ),
                   buildDoctorCardOption(
+                    context,
                     image: 'assets/images/home_screen/doctor1@3x.png',
                     colorType: 0,
                   ),
                   buildDoctorCardOption(
+                    context,
                     image: 'assets/images/home_screen/doctor2@3x.png',
                     colorType: 1,
                   ),
@@ -275,7 +288,8 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Container buildDoctorCardOption({
+  Container buildDoctorCardOption(
+    BuildContext context, {
     required String image,
     required int colorType,
   }) {
@@ -290,13 +304,20 @@ class HomeScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            width: 140,
-            decoration: BoxDecoration(
-              color: AppPalette.doctorCardBackgroundColors[colorType],
-              borderRadius: BorderRadius.circular(10),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const DoctorScreen(),
+              ));
+            },
+            child: Container(
+              width: 140,
+              decoration: BoxDecoration(
+                color: AppPalette.doctorCardBackgroundColors[colorType],
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Image.asset(image),
             ),
-            child: Image.asset(image),
           ),
           const SizedBox(height: 12),
           const Text(
