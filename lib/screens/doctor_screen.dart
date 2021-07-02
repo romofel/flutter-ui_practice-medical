@@ -127,16 +127,61 @@ class DoctorScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(35),
                       ),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const SizedBox(height: 24),
-                          const Text('Working Time'),
-                          const Text('Mon - Fri, Morning 8 AM - Night 8 PM'),
-                          Row(
-                            children: [
-                              Text('Schedule'),
-                              Text('May 2021'),
-                              Icon(Icons.arrow_drop_down),
-                            ],
+                          const Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 24),
+                            child: Text(
+                              'Working Time',
+                              style: TextStyle(
+                                color: Color(0xb302100F),
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          const Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 24),
+                            child: Text(
+                              'Mon - Fri, Morning 8 AM - Night 8 PM',
+                              style: TextStyle(
+                                color: Color(0x8002100F),
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 24),
+                            child: Row(
+                              children: const <Widget>[
+                                Text(
+                                  'Schedule',
+                                  style: TextStyle(
+                                    color: Color(0xb302100F),
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                                Spacer(),
+                                Text(
+                                  'May 2021',
+                                  style: TextStyle(
+                                    color: Color(0x8002100F),
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                                Icon(
+                                  Icons.arrow_drop_down,
+                                  color: Color(0x8002100F),
+                                  size: 18,
+                                ),
+                              ],
+                            ),
                           ),
                           Row(
                             children: [
