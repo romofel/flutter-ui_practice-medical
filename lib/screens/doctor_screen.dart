@@ -1,3 +1,4 @@
+import 'package:app/constants.dart';
 import 'package:flutter/material.dart';
 
 class DoctorScreen extends StatelessWidget {
@@ -13,12 +14,12 @@ class DoctorScreen extends StatelessWidget {
             child: Column(
               children: [
                 Row(
-                  children: [
+                  children: const [
                     Icon(Icons.ac_unit),
                     Icon(Icons.ac_unit),
                   ],
                 ),
-                FlutterLogo(),
+                const FlutterLogo(),
               ],
             ),
           ),
@@ -26,7 +27,7 @@ class DoctorScreen extends StatelessWidget {
             flex: 2,
             child: Container(
               decoration: const BoxDecoration(
-                color: Colors.white,
+                color: Color(0xffFAFAFA),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(35),
                   topRight: Radius.circular(35),
@@ -97,13 +98,34 @@ class DoctorScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 24),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         buildMetricContainer(
                           title: 'Patients',
                           value: '1000+',
                           icon: Icons.supervised_user_circle_outlined,
                         ),
+                        buildMetricContainer(
+                          title: 'Experiences',
+                          value: '1 Year',
+                          icon: Icons.calendar_today_rounded,
+                        ),
+                        buildMetricContainer(
+                          title: 'Reviews',
+                          value: '5.0',
+                          icon: Icons.star_rounded,
+                          color: AppPalette.socialStarColor,
+                        ),
                       ],
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: const Color(0xffFFFFFF),
+                        borderRadius: BorderRadius.circular(35),
+                      ),
                     ),
                   ),
                 ],
@@ -119,6 +141,7 @@ class DoctorScreen extends StatelessWidget {
     required String title,
     required String value,
     required IconData icon,
+    Color color = const Color(0xff20BEB8),
   }) {
     return Container(
       width: 100,
@@ -137,7 +160,7 @@ class DoctorScreen extends StatelessWidget {
             title,
             style: const TextStyle(
               color: Color(0x8002100F),
-              fontSize: 12,
+              fontSize: 10,
               fontWeight: FontWeight.w400,
             ),
           ),
@@ -146,7 +169,7 @@ class DoctorScreen extends StatelessWidget {
             children: [
               Icon(
                 icon,
-                color: const Color(0xff20BEB8),
+                color: color,
                 size: 18,
               ),
               const SizedBox(width: 4),
