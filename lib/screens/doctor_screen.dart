@@ -183,6 +183,43 @@ class DoctorScreen extends StatelessWidget {
                               ],
                             ),
                           ),
+                          const SizedBox(height: 8),
+                          Container(
+                            height: 66,
+                            padding: const EdgeInsets.only(left: 24),
+                            child: ListView(
+                              scrollDirection: Axis.horizontal,
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.all(12),
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xffFAFAFA),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Column(
+                                    children: const <Widget>[
+                                      Text(
+                                        'Mon',
+                                        style: TextStyle(
+                                          color: Color(0x8002100F),
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w400,
+                                        ),
+                                      ),
+                                      Text(
+                                        '12',
+                                        style: TextStyle(
+                                          color: Color(0x8002100F),
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
                           const SizedBox(height: 16),
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 24),
