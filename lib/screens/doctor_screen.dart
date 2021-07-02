@@ -126,6 +126,30 @@ class DoctorScreen extends StatelessWidget {
                         color: const Color(0xffFFFFFF),
                         borderRadius: BorderRadius.circular(35),
                       ),
+                      child: Column(
+                        children: [
+                          const SizedBox(height: 24),
+                          const Text('Working Time'),
+                          const Text('Mon - Fri, Morning 8 AM - Night 8 PM'),
+                          Row(
+                            children: [
+                              Text('Schedule'),
+                              Text('May 2021'),
+                              Icon(Icons.arrow_drop_down),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                child: Icon(Icons.favorite_rounded),
+                              ),
+                              Container(
+                                child: Text('Get Appointment'),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
