@@ -5,9 +5,32 @@ class DoctorScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Doctor Screen'),
+    return Scaffold(
+      backgroundColor: const Color(0xff20BEB8),
+      body: Column(
+        children: [
+          Expanded(
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Icon(Icons.ac_unit),
+                    Icon(Icons.ac_unit),
+                  ],
+                ),
+                FlutterLogo(),
+              ],
+            ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
