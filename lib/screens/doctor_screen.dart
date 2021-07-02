@@ -38,8 +38,8 @@ class DoctorScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 24),
                     child: Row(
-                      children: [
-                        const Text(
+                      children: const <Widget>[
+                        Text(
                           'Dr. Jenny Wilson',
                           style: TextStyle(
                             color: Color(0xff02100F),
@@ -48,7 +48,7 @@ class DoctorScreen extends StatelessWidget {
                           ),
                         ),
                         Spacer(),
-                        const Text(
+                        Text(
                           '\$50.00',
                           style: TextStyle(
                             color: Color(0xff20100F),
@@ -56,8 +56,8 @@ class DoctorScreen extends StatelessWidget {
                             fontWeight: FontWeight.w500,
                           ),
                         ),
-                        const SizedBox(width: 4),
-                        const Text(
+                        SizedBox(width: 4),
+                        Text(
                           '+5% VAT',
                           style: TextStyle(
                             color: Color(0xff4DD663),
