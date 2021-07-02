@@ -98,48 +98,10 @@ class DoctorScreen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 24),
                     child: Row(
                       children: [
-                        Container(
-                          width: 100,
-                          height: 63,
-                          padding: const EdgeInsets.all(12),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(
-                              color: const Color(0x1a02100F),
-                            ),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text(
-                                'Patients',
-                                style: TextStyle(
-                                  color: Color(0x8002100F),
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                              ),
-                              const SizedBox(height: 2),
-                              Row(
-                                children: const [
-                                  Icon(
-                                    Icons.supervised_user_circle_outlined,
-                                    color: Color(0xff20BEB8),
-                                    size: 18,
-                                  ),
-                                  SizedBox(width: 4),
-                                  Text(
-                                    '1000+',
-                                    style: TextStyle(
-                                      color: Color(0xb302100F),
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
+                        buildMetricContainer(
+                          title: 'Patients',
+                          value: '1000+',
+                          icon: Icons.supervised_user_circle_outlined,
                         ),
                       ],
                     ),
@@ -147,6 +109,56 @@ class DoctorScreen extends StatelessWidget {
                 ],
               ),
             ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Container buildMetricContainer({
+    required String title,
+    required String value,
+    required IconData icon,
+  }) {
+    return Container(
+      width: 100,
+      height: 63,
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(
+          color: const Color(0x1a02100F),
+        ),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            style: const TextStyle(
+              color: Color(0x8002100F),
+              fontSize: 12,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+          const SizedBox(height: 2),
+          Row(
+            children: [
+              Icon(
+                icon,
+                color: const Color(0xff20BEB8),
+                size: 18,
+              ),
+              const SizedBox(width: 4),
+              Text(
+                value,
+                style: const TextStyle(
+                  color: Color(0xb302100F),
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ],
           ),
         ],
       ),
