@@ -34,12 +34,39 @@ class DoctorScreen extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  Row(
-                    children: [
-                      const Text('Dr. Jenny Wilson'),
-                      const Text('\$50.00'),
-                      const Text('+5% VAT'),
-                    ],
+                  const SizedBox(height: 24),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 24),
+                    child: Row(
+                      children: [
+                        const Text(
+                          'Dr. Jenny Wilson',
+                          style: TextStyle(
+                            color: Color(0xff02100F),
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Spacer(),
+                        const Text(
+                          '\$50.00',
+                          style: TextStyle(
+                            color: Color(0xff20100F),
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                        const Text(
+                          '+5% VAT',
+                          style: TextStyle(
+                            color: Color(0xff4DD663),
+                            fontSize: 10,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   const Text('Specialist Dentist'),
                   const Text('Massachusetts General Hospital, Boston, MA'),
