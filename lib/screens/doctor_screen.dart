@@ -93,7 +93,23 @@ class DoctorScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Row(),
+                  Row(
+                    children: [
+                      Container(
+                        child: Column(
+                          children: [
+                            Text('Patients'),
+                            Row(
+                              children: [
+                                Icon(Icons.ac_unit),
+                                Text('1000+'),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
