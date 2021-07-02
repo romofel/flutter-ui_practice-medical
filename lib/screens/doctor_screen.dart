@@ -32,6 +32,20 @@ class DoctorScreen extends StatelessWidget {
                   topRight: Radius.circular(35),
                 ),
               ),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      const Text('Dr. Jenny Wilson'),
+                      const Text('\$50.00'),
+                      const Text('+5% VAT'),
+                    ],
+                  ),
+                  const Text('Specialist Dentist'),
+                  const Text('Massachusetts General Hospital, Boston, MA'),
+                  Row(),
+                ],
+              ),
             ),
           ),
         ],
