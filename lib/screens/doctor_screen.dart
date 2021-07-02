@@ -93,22 +93,34 @@ class DoctorScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Row(
-                    children: [
-                      Container(
-                        child: Column(
-                          children: [
-                            Text('Patients'),
-                            Row(
-                              children: [
-                                Icon(Icons.ac_unit),
-                                Text('1000+'),
-                              ],
+                  const SizedBox(height: 16),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 24),
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 100,
+                          height: 63,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                              color: const Color(0x1a02100F),
                             ),
-                          ],
+                          ),
+                          child: Column(
+                            children: [
+                              Text('Patients'),
+                              Row(
+                                children: [
+                                  Icon(Icons.ac_unit),
+                                  Text('1000+'),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ],
               ),
