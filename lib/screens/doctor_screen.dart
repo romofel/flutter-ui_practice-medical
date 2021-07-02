@@ -183,15 +183,46 @@ class DoctorScreen extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Row(
-                            children: [
-                              Container(
-                                child: Icon(Icons.favorite_rounded),
-                              ),
-                              Container(
-                                child: Text('Get Appointment'),
-                              ),
-                            ],
+                          const SizedBox(height: 16),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 24),
+                            child: Row(
+                              children: [
+                                Container(
+                                  width: 46,
+                                  height: 46,
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xffFAFAFA),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: const Icon(
+                                    Icons.favorite_rounded,
+                                    // color: AppPalette.socialHeartColor,
+                                    color: Color(0xffFF2222),
+                                  ),
+                                ),
+                                const SizedBox(width: 16),
+                                Expanded(
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 14),
+                                    alignment: AlignmentDirectional.center,
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xff20BEB8),
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    child: const Text(
+                                      'Get Appointment',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
