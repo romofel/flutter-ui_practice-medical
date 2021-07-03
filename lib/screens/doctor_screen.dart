@@ -256,6 +256,10 @@ class DoctorScreen extends StatelessWidget {
                                         context: context,
                                         builder: (context) {
                                           return SimpleDialog(
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(20),
+                                            ),
                                             contentPadding:
                                                 const EdgeInsets.symmetric(
                                                     horizontal: 30,
