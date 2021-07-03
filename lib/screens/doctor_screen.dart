@@ -10,18 +10,20 @@ class DoctorScreen extends StatelessWidget {
       backgroundColor: const Color(0xff20BEB8),
       body: Column(
         children: [
+          const SizedBox(height: 56),
           Expanded(
-            child: Column(
-              children: [
-                Row(
-                  children: const [
-                    Icon(Icons.ac_unit),
-                    Icon(Icons.ac_unit),
-                  ],
-                ),
-                Image.asset(
-                    'assets/images/doctor_view_screen/doctor_hero_avatar.png'),
-              ],
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Icon(Icons.ac_unit),
+                  Image.asset(
+                      'assets/images/doctor_view_screen/doctor_hero_avatar.png'),
+                  const Icon(Icons.ac_unit),
+                ],
+              ),
             ),
           ),
           Expanded(
