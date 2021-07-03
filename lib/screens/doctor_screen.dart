@@ -18,7 +18,12 @@ class DoctorScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Icon(Icons.arrow_back, color: Color(0xb3FFFFFF)),
+                  IconButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      icon: const Icon(Icons.arrow_back,
+                          color: Color(0xb3FFFFFF))),
                   Image.asset(
                       'assets/images/doctor_view_screen/doctor_hero_avatar.png'),
                   const Icon(Icons.more_vert_rounded, color: Color(0xb3FFFFFF)),
