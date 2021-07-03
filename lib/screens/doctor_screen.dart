@@ -303,36 +303,22 @@ class DoctorScreen extends StatelessWidget {
                                                 value: '12:00 AM',
                                               ),
                                               Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
                                                 children: [
-                                                  Container(
-                                                    width: 126,
-                                                    height: 46,
-                                                    alignment:
-                                                        AlignmentDirectional
-                                                            .center,
-                                                    decoration: BoxDecoration(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              10),
-                                                      border: Border.all(
-                                                        width: 1,
-                                                        color: const Color(
-                                                            0x3302100F),
-                                                      ),
-                                                    ),
-                                                    child: const Text(
-                                                      'Cancel',
-                                                      style: TextStyle(
-                                                        color:
-                                                            Color(0xb302100F),
-                                                        fontSize: 14,
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                      ),
-                                                    ),
+                                                  buildDialogButton(
+                                                    title: 'Cancel',
+                                                    foregroundColor:
+                                                        const Color(0xb302100F),
                                                   ),
-                                                  Container(
-                                                    child: Text('Pay Advance'),
+                                                  buildDialogButton(
+                                                    title: 'Pay Advance',
+                                                    foregroundColor:
+                                                        Colors.white,
+                                                    backgroundColor:
+                                                        const Color(0xff20BEB8),
+                                                    hasBorder: false,
                                                   ),
                                                 ],
                                               ),
@@ -372,6 +358,39 @@ class DoctorScreen extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  GestureDetector buildDialogButton({
+    required String title,
+    required Color foregroundColor,
+    Color backgroundColor = Colors.transparent,
+    bool hasBorder = true,
+    VoidCallback? onTap,
+  }) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 110,
+        height: 46,
+        alignment: AlignmentDirectional.center,
+        decoration: BoxDecoration(
+          color: backgroundColor,
+          borderRadius: BorderRadius.circular(10),
+          border: Border.all(
+            width: hasBorder ? 1 : 0,
+            color: const Color(0x3302100F),
+          ),
+        ),
+        child: Text(
+          title,
+          style: TextStyle(
+            color: foregroundColor,
+            fontSize: 14,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
       ),
     );
   }
