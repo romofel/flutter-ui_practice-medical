@@ -288,32 +288,20 @@ class DoctorScreen extends StatelessWidget {
                                                   ),
                                                 ),
                                               ),
-                                              Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceBetween,
-                                                children: [
-                                                  const Text(
-                                                    'Booking Id',
-                                                    style: TextStyle(
-                                                      color: Color(0xb302100F),
-                                                      fontSize: 14,
-                                                      fontWeight:
-                                                          FontWeight.w400,
-                                                    ),
-                                                  ),
-                                                  const Text(
-                                                    'A806513',
-                                                    style: TextStyle(
-                                                      color: Color(0xff02100F),
-                                                      fontSize: 14,
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                    ),
-                                                  ),
-                                                ],
+                                              buildAppointmentDataRow(
+                                                title: 'Booking Id',
+                                                value: '#A806513',
                                               ),
-                                              Divider(),
+                                              const Divider(),
+                                              buildAppointmentDataRow(
+                                                title: 'Date',
+                                                value: 'May 15, 2021',
+                                              ),
+                                              const Divider(),
+                                              buildAppointmentDataRow(
+                                                title: 'Time',
+                                                value: '12:00 AM',
+                                              ),
                                               Row(
                                                 children: [
                                                   Container(
@@ -361,6 +349,33 @@ class DoctorScreen extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+
+  Row buildAppointmentDataRow({
+    required String title,
+    required String value,
+  }) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          title,
+          style: const TextStyle(
+            color: Color(0xb302100F),
+            fontSize: 14,
+            fontWeight: FontWeight.w400,
+          ),
+        ),
+        Text(
+          value,
+          style: const TextStyle(
+            color: Color(0xff02100F),
+            fontSize: 14,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ],
     );
   }
 
