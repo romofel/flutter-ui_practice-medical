@@ -190,32 +190,34 @@ class DoctorScreen extends StatelessWidget {
                             child: ListView(
                               scrollDirection: Axis.horizontal,
                               children: [
-                                Container(
-                                  padding: const EdgeInsets.all(12),
-                                  decoration: BoxDecoration(
-                                    color: const Color(0xffFAFAFA),
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  child: Column(
-                                    children: const <Widget>[
-                                      Text(
-                                        'Mon',
-                                        style: TextStyle(
-                                          color: Color(0x8002100F),
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.w400,
-                                        ),
-                                      ),
-                                      Text(
-                                        '12',
-                                        style: TextStyle(
-                                          color: Color(0x8002100F),
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
+                                buildDateContainer(
+                                  date: 'Mon',
+                                  day: 12,
+                                ),
+                                buildDateContainer(
+                                  date: 'Tue',
+                                  day: 13,
+                                ),
+                                buildDateContainer(
+                                  date: 'Wed',
+                                  day: 14,
+                                  isActive: true,
+                                ),
+                                buildDateContainer(
+                                  date: 'Thu',
+                                  day: 15,
+                                ),
+                                buildDateContainer(
+                                  date: 'Fri',
+                                  day: 16,
+                                ),
+                                buildDateContainer(
+                                  date: 'Sat',
+                                  day: 17,
+                                ),
+                                buildDateContainer(
+                                  date: 'Sun',
+                                  day: 18,
                                 ),
                               ],
                             ),
@@ -270,6 +272,42 @@ class DoctorScreen extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Container buildDateContainer({
+    required String date,
+    required int day,
+    bool isActive = false,
+  }) {
+    return Container(
+      width: 49,
+      padding: const EdgeInsets.all(12),
+      margin: const EdgeInsets.only(right: 12),
+      decoration: BoxDecoration(
+        color: isActive ? const Color(0xff20BEB8) : const Color(0xffFAFAFA),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Column(
+        children: <Widget>[
+          Text(
+            date,
+            style: TextStyle(
+              color: isActive ? Colors.white : const Color(0x8002100F),
+              fontSize: 11,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+          Text(
+            '$day',
+            style: TextStyle(
+              color: isActive ? Colors.white : const Color(0x8002100F),
+              fontSize: 12,
+              fontWeight: FontWeight.w600,
             ),
           ),
         ],
