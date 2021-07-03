@@ -263,9 +263,9 @@ class DoctorScreen extends StatelessWidget {
                                             children: [
                                               Image.asset(
                                                 'assets/images/confirmation_screen/success_icon.png',
-                                                height: 100,
+                                                height: 80,
                                               ),
-                                              const SizedBox(height: 32),
+                                              const SizedBox(height: 24),
                                               const Center(
                                                 child: Text(
                                                   'Confirmation',
@@ -288,6 +288,7 @@ class DoctorScreen extends StatelessWidget {
                                                   ),
                                                 ),
                                               ),
+                                              const SizedBox(height: 24),
                                               buildAppointmentDataRow(
                                                 title: 'Booking Id',
                                                 value: '#A806513',
@@ -302,6 +303,7 @@ class DoctorScreen extends StatelessWidget {
                                                 title: 'Time',
                                                 value: '12:00 AM',
                                               ),
+                                              const SizedBox(height: 24),
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment
