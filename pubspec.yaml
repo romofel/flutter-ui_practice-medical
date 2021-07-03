@@ -63,6 +63,7 @@ flutter:
     - assets/images/
     - assets/images/home_screen/
     - assets/images/doctor_view_screen/
+    - assets/images/confirmation_screen/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
