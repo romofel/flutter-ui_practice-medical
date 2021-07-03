@@ -263,13 +263,42 @@ class DoctorScreen extends StatelessWidget {
                                             children: [
                                               Image.asset(
                                                   'assets/images/confirmation_screen/success_icon.png'),
-                                              Text('Confirmation'),
-                                              Text(
-                                                  'Your appointment with Dr. Jenny Wilson confirmed.'),
+                                              const Text(
+                                                'Confirmation',
+                                                style: TextStyle(
+                                                  color: Color(0xff02100F),
+                                                  fontSize: 18,
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                              ),
+                                              const Text(
+                                                'Your appointment with Dr. Jenny Wilson confirmed.',
+                                                style: TextStyle(
+                                                  color: Color(0x9902100F),
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.w400,
+                                                ),
+                                              ),
                                               Row(
                                                 children: [
-                                                  Text('Booking Id'),
-                                                  Text('A806513'),
+                                                  const Text(
+                                                    'Booking Id',
+                                                    style: TextStyle(
+                                                      color: Color(0xb302100F),
+                                                      fontSize: 14,
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                    ),
+                                                  ),
+                                                  const Text(
+                                                    'A806513',
+                                                    style: TextStyle(
+                                                      color: Color(0xff02100F),
+                                                      fontSize: 14,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                    ),
+                                                  ),
                                                 ],
                                               ),
                                               Divider(),
