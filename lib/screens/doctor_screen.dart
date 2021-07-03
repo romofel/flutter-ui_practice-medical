@@ -305,7 +305,31 @@ class DoctorScreen extends StatelessWidget {
                                               Row(
                                                 children: [
                                                   Container(
-                                                    child: Text('Cancel'),
+                                                    width: 126,
+                                                    height: 46,
+                                                    alignment:
+                                                        AlignmentDirectional
+                                                            .center,
+                                                    decoration: BoxDecoration(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              10),
+                                                      border: Border.all(
+                                                        width: 1,
+                                                        color: const Color(
+                                                            0x3302100F),
+                                                      ),
+                                                    ),
+                                                    child: const Text(
+                                                      'Cancel',
+                                                      style: TextStyle(
+                                                        color:
+                                                            Color(0xb302100F),
+                                                        fontSize: 14,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                      ),
+                                                    ),
                                                   ),
                                                   Container(
                                                     child: Text('Pay Advance'),
