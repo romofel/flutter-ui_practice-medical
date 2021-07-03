@@ -251,7 +251,24 @@ class DoctorScreen extends StatelessWidget {
                                 const SizedBox(width: 16),
                                 Expanded(
                                   child: GestureDetector(
-                                    onTap: () {},
+                                    onTap: () async {
+                                      await showDialog(
+                                        context: context,
+                                        builder: (context) {
+                                          return SimpleDialog(
+                                            contentPadding:
+                                                const EdgeInsets.symmetric(
+                                                    horizontal: 30,
+                                                    vertical: 70),
+                                            children: [
+                                              Image.asset(
+                                                  'assets/images/confirmation_screen/success_icon.png'),
+                                              Text('right under?'),
+                                            ],
+                                          );
+                                        },
+                                      );
+                                    },
                                     child: Container(
                                       padding: const EdgeInsets.symmetric(
                                           vertical: 14),
