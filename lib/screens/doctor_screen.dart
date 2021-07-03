@@ -19,7 +19,8 @@ class DoctorScreen extends StatelessWidget {
                     Icon(Icons.ac_unit),
                   ],
                 ),
-                const FlutterLogo(),
+                Image.asset(
+                    'assets/images/doctor_view_screen/doctor_hero_avatar.png'),
               ],
             ),
           ),
