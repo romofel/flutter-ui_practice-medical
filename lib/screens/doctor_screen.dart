@@ -262,24 +262,36 @@ class DoctorScreen extends StatelessWidget {
                                                     vertical: 70),
                                             children: [
                                               Image.asset(
-                                                  'assets/images/confirmation_screen/success_icon.png'),
-                                              const Text(
-                                                'Confirmation',
-                                                style: TextStyle(
-                                                  color: Color(0xff02100F),
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.w500,
+                                                'assets/images/confirmation_screen/success_icon.png',
+                                                height: 100,
+                                              ),
+                                              const SizedBox(height: 32),
+                                              const Center(
+                                                child: Text(
+                                                  'Confirmation',
+                                                  style: TextStyle(
+                                                    color: Color(0xff02100F),
+                                                    fontSize: 18,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
                                                 ),
                                               ),
-                                              const Text(
-                                                'Your appointment with Dr. Jenny Wilson confirmed.',
-                                                style: TextStyle(
-                                                  color: Color(0x9902100F),
-                                                  fontSize: 14,
-                                                  fontWeight: FontWeight.w400,
+                                              const SizedBox(height: 16),
+                                              const Center(
+                                                child: Text(
+                                                  'Your appointment with Dr. Jenny Wilson confirmed.',
+                                                  textAlign: TextAlign.center,
+                                                  style: TextStyle(
+                                                    color: Color(0x9902100F),
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w400,
+                                                  ),
                                                 ),
                                               ),
                                               Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
                                                 children: [
                                                   const Text(
                                                     'Booking Id',
