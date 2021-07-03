@@ -263,7 +263,26 @@ class DoctorScreen extends StatelessWidget {
                                             children: [
                                               Image.asset(
                                                   'assets/images/confirmation_screen/success_icon.png'),
-                                              Text('right under?'),
+                                              Text('Confirmation'),
+                                              Text(
+                                                  'Your appointment with Dr. Jenny Wilson confirmed.'),
+                                              Row(
+                                                children: [
+                                                  Text('Booking Id'),
+                                                  Text('A806513'),
+                                                ],
+                                              ),
+                                              Divider(),
+                                              Row(
+                                                children: [
+                                                  Container(
+                                                    child: Text('Cancel'),
+                                                  ),
+                                                  Container(
+                                                    child: Text('Pay Advance'),
+                                                  ),
+                                                ],
+                                              ),
                                             ],
                                           );
                                         },
