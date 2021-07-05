@@ -56,7 +56,21 @@ class AppointmentScreen extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Container(),
+                    Container(
+                      width: 46,
+                      height: 46,
+                      decoration: BoxDecoration(
+                        color: Color(0xff45B5E5),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Center(
+                        child: Image.asset(
+                          'assets/images/appointment_screen/phone_icon.png',
+                          width: 23,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
                     Column(
                       children: [
                         Text('Voice Call'),
