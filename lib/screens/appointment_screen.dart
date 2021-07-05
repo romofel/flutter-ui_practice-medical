@@ -73,7 +73,14 @@ class AppointmentScreen extends StatelessWidget {
                   color: const Color(0xff20BEB8),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Text('Continue'),
+                child: Text(
+                  'Continue',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
               ),
             ],
           ),
