@@ -129,8 +129,14 @@ class ChatScreen extends StatelessWidget {
                           width: 100,
                           height: 125,
                           decoration: BoxDecoration(
-                            color: Color(0x1a20BEB8),
+                            color: const Color(0x1a20BEB8),
                             borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Center(
+                            child: Image.asset(
+                              'assets/images/chat_screen/chat_image_1.png',
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ],
