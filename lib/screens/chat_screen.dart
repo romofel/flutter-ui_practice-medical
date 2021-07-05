@@ -10,7 +10,7 @@ class ChatScreen extends StatelessWidget {
         children: [
           Container(
             padding: const EdgeInsets.only(top: 54, left: 24, right: 24),
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color(0x80FFFFFF),
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(20),
@@ -30,9 +30,24 @@ class ChatScreen extends StatelessWidget {
                 ),
                 Container(),
                 Column(
-                  children: [
-                    Text('Dr. Jenny Wilson'),
-                    Text('Dentist Specialist'),
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Text(
+                      'Dr. Jenny Wilson',
+                      style: TextStyle(
+                        color: Color(0xff02100F),
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    Text(
+                      'Dentist Specialist',
+                      style: TextStyle(
+                        color: Color(0x80001133),
+                        fontSize: 10,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
                   ],
                 ),
                 Container(
