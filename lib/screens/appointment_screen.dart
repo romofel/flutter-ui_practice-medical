@@ -73,8 +73,22 @@ class AppointmentScreen extends StatelessWidget {
                     ),
                     Column(
                       children: [
-                        Text('Voice Call'),
-                        Text('Start voice call with doctor'),
+                        Text(
+                          'Voice Call',
+                          style: TextStyle(
+                            color: Color(0xff02100F),
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                        Text(
+                          'Start voice call with doctor',
+                          style: TextStyle(
+                            color: Color(0xb302100F),
+                            fontSize: 10,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
                       ],
                     ),
                   ],
