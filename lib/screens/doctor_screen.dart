@@ -1,4 +1,5 @@
 import 'package:app/constants.dart';
+import 'package:app/screens/appointment_screen.dart';
 import 'package:flutter/material.dart';
 
 class DoctorScreen extends StatelessWidget {
@@ -329,6 +330,15 @@ class DoctorScreen extends StatelessWidget {
                                                     backgroundColor:
                                                         const Color(0xff20BEB8),
                                                     hasBorder: false,
+                                                    onTap: () {
+                                                      Navigator.of(context)
+                                                          .push(
+                                                        MaterialPageRoute(
+                                                          builder: (context) =>
+                                                              const AppointmentScreen(),
+                                                        ),
+                                                      );
+                                                    },
                                                   ),
                                                 ],
                                               ),
