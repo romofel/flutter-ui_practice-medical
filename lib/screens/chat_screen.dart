@@ -125,20 +125,11 @@ class ChatScreen extends StatelessWidget {
                     timestamp: '9:30 PM',
                     chatChild: Row(
                       children: [
-                        Container(
-                          width: 100,
-                          height: 125,
-                          decoration: BoxDecoration(
-                            color: const Color(0x1a20BEB8),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Center(
-                            child: Image.asset(
-                              'assets/images/chat_screen/chat_image_1.png',
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
+                        buildChatImageMessage(
+                            'assets/images/chat_screen/chat_image_1.png'),
+                        const SizedBox(width: 18),
+                        buildChatImageMessage(
+                            'assets/images/chat_screen/chat_image_2.png'),
                       ],
                     ),
                   ),
@@ -200,6 +191,23 @@ class ChatScreen extends StatelessWidget {
           ),
           const SizedBox(height: 32),
         ],
+      ),
+    );
+  }
+
+  Container buildChatImageMessage(image) {
+    return Container(
+      width: 100,
+      height: 125,
+      decoration: BoxDecoration(
+        color: const Color(0x1a20BEB8),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Center(
+        child: Image.asset(
+          image,
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }
