@@ -32,13 +32,14 @@ class AppointmentScreen extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                  Icon(
+                  const Icon(
                     Icons.more_vert_rounded,
                     color: Color(0xff02100F),
                   ),
                 ],
               ),
-              Text(
+              const SizedBox(height: 32),
+              const Text(
                 'Connect With Doctor',
                 style: TextStyle(
                   color: Color(0xb302100F),
@@ -46,6 +47,7 @@ class AppointmentScreen extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                 ),
               ),
+              const SizedBox(height: 32),
             ],
           ),
         ),
