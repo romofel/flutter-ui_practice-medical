@@ -104,6 +104,22 @@ class VideoCallScreen extends StatelessWidget {
                           image:
                               'assets/images/video_call_screen/video_bar_icon.png',
                         ),
+                        buildCallOptionButton(
+                          image:
+                              'assets/images/video_call_screen/mic_bar_icon.png',
+                        ),
+                        buildCallOptionButton(
+                          image:
+                              'assets/images/video_call_screen/phone_bar_icon.png',
+                        ),
+                        buildCallOptionButton(
+                          image:
+                              'assets/images/video_call_screen/camera_bar_icon.png',
+                        ),
+                        buildCallOptionButton(
+                          image:
+                              'assets/images/video_call_screen/chat_bar_icon.png',
+                        ),
                       ],
                     ),
                     const Text(
