@@ -50,16 +50,16 @@ class ChatScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                Container(
-                    child: Image.asset(
-                        'assets/images/chat_screen/appointment_phone_icon.png')),
-                Container(
-                    child: Image.asset(
-                        'assets/images/chat_screen/appointment_video_icon.png')),
+                buildAppBarButton(
+                    image:
+                        'assets/images/chat_screen/appointment_phone_icon.png'),
+                buildAppBarButton(
+                    image:
+                        'assets/images/chat_screen/appointment_video_icon.png'),
               ],
             ),
           ),
-          Text('Today'),
+          const Text('Today'),
           Expanded(
             child: Container(),
           ),
@@ -67,5 +67,24 @@ class ChatScreen extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Container buildAppBarButton({
+    required String image,
+  }) {
+    return Container(
+        width: 40,
+        height: 40,
+        decoration: const BoxDecoration(
+          shape: BoxShape.circle,
+          color: Color(0x1a20BEB8),
+        ),
+        child: Center(
+          child: Image.asset(
+            image,
+            fit: BoxFit.cover,
+            width: 20,
+          ),
+        ));
   }
 }
