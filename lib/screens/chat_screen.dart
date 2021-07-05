@@ -98,24 +98,36 @@ class ChatScreen extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: Container(
-              color: Colors.red,
-              child: ListView(
-                children: [
-                  Column(
-                    children: [
-                      Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xffF5F5F5),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: const Text(
-                              'Please lie down on your bed and unbutton your shirt so that I may check your chest')),
-                      const Text('12:00PM'),
-                    ],
-                  ),
-                ],
-              ),
+            child: ListView(
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: const Color(0xffF5F5F5),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Text(
+                        'Please lie down on your bed and unbutton your shirt so that I may check your chest',
+                        style: TextStyle(
+                          color: Color(0xb302100F),
+                          fontSize: 13,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ),
+                    const Text(
+                      '12:00PM',
+                      style: TextStyle(
+                        color: Color(0x4d001133),
+                        fontSize: 10,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
           const SizedBox(height: 32),
