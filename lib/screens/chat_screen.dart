@@ -111,6 +111,12 @@ class ChatScreen extends StatelessWidget {
                         border: InputBorder.none,
                         filled: true,
                         fillColor: Color(0xffF5F5F5),
+                        hintText: 'Type here...',
+                        hintStyle: TextStyle(
+                          color: Color(0x8002100F),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                        ),
                       ),
                     ),
                   ),
