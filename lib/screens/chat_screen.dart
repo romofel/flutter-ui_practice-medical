@@ -117,6 +117,13 @@ class ChatScreen extends StatelessWidget {
                           fontSize: 12,
                           fontWeight: FontWeight.w400,
                         ),
+                        prefixIcon: UnconstrainedBox(
+                          child: Image.asset(
+                            'assets/images/chat_screen/paper_clip_icon.png',
+                            fit: BoxFit.cover,
+                            width: 10,
+                          ),
+                        ),
                       ),
                     ),
                   ),
