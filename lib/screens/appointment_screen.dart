@@ -68,6 +68,13 @@ class AppointmentScreen extends StatelessWidget {
                 image: 'assets/images/appointment_screen/chat_icon.png',
                 backgroundColor: const Color(0xffE58245),
               ),
+              Container(
+                decoration: BoxDecoration(
+                  color: const Color(0xff20BEB8),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Text('Continue'),
+              ),
             ],
           ),
         ),
