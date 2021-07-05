@@ -1,3 +1,4 @@
+import 'package:app/screens/chat_screen.dart';
 import 'package:flutter/material.dart';
 
 class VideoCallScreen extends StatelessWidget {
@@ -127,6 +128,13 @@ class VideoCallScreen extends StatelessWidget {
                           buildCallOptionButton(
                             image:
                                 'assets/images/video_call_screen/chat_bar_icon.png',
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => const ChatScreen(),
+                                ),
+                              );
+                            },
                           ),
                         ],
                       ),
