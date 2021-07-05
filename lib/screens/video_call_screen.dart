@@ -150,25 +150,29 @@ class VideoCallScreen extends StatelessWidget {
     );
   }
 
-  Container buildCallOptionButton({
+  GestureDetector buildCallOptionButton({
     required String image,
     double width = 54,
     double height = 54,
     double imageWidth = 18,
     Color backgroundColor = const Color(0x4dFFFFFF),
+    VoidCallback? onTap,
   }) {
-    return Container(
-      width: width,
-      height: height,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: backgroundColor,
-      ),
-      child: Center(
-        child: Image.asset(
-          image,
-          width: imageWidth,
-          fit: BoxFit.cover,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: width,
+        height: height,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: backgroundColor,
+        ),
+        child: Center(
+          child: Image.asset(
+            image,
+            width: imageWidth,
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );
