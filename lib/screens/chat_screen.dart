@@ -121,6 +121,7 @@ class ChatScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+                  const SizedBox(height: 24),
                   buildChatBlock(
                     timestamp: '9:30 PM',
                     chatChild: Row(
@@ -130,6 +131,77 @@ class ChatScreen extends StatelessWidget {
                         const SizedBox(width: 18),
                         buildChatImageMessage(
                             'assets/images/chat_screen/chat_image_2.png'),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                  buildChatBlock(
+                    timestamp: '10:20 PM',
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    chatChild: Row(
+                      children: [
+                        const Spacer(),
+                        Container(
+                          padding: const EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            color: const Color(0xff20BEB8),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: const Text(
+                            'Yes, doctor',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 13,
+                              fontWeight: FontWeight.w400,
+                              height: 1.4,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                  buildChatBlock(
+                    timestamp: '12:00 PM',
+                    chatChild: Container(
+                      padding: const EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        color: const Color(0xffF5F5F5),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Text(
+                        'There is nothing to worry about. You have been suffering from viral fever.',
+                        style: TextStyle(
+                          color: Color(0xb302100F),
+                          fontSize: 13,
+                          fontWeight: FontWeight.w400,
+                          height: 1.4,
+                        ),
+                      ),
+                    ),
+                  ),
+                  buildChatBlock(
+                    timestamp: '10:20 PM',
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    chatChild: Row(
+                      children: [
+                        const Spacer(),
+                        Container(
+                          padding: const EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            color: const Color(0xff20BEB8),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: const Text(
+                            'Do I need any medicine?',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 13,
+                              fontWeight: FontWeight.w400,
+                              height: 1.4,
+                            ),
+                          ),
+                        )
                       ],
                     ),
                   ),
@@ -215,9 +287,10 @@ class ChatScreen extends StatelessWidget {
   Column buildChatBlock({
     required String timestamp,
     required Widget chatChild,
+    CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.start,
   }) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: crossAxisAlignment,
       children: [
         chatChild,
         const SizedBox(height: 8),
