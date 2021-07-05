@@ -29,7 +29,22 @@ class ChatScreen extends StatelessWidget {
                     color: Color(0xff02100F),
                   ),
                 ),
-                Container(),
+                Stack(
+                  children: [
+                    Container(
+                      width: 46,
+                      height: 46,
+                      decoration: const BoxDecoration(
+                        color: Color(0x80001133),
+                        shape: BoxShape.circle,
+                      ),
+                      child: Center(
+                        child: Image.asset(
+                            'assets/images/chat_screen/doctor_avatar.png'),
+                      ),
+                    ),
+                  ],
+                ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
