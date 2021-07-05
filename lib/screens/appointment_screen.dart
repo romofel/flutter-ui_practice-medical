@@ -69,6 +69,9 @@ class AppointmentScreen extends StatelessWidget {
                 backgroundColor: const Color(0xffE58245),
               ),
               Container(
+                width: double.infinity,
+                padding: const EdgeInsets.symmetric(vertical: 14),
+                alignment: AlignmentDirectional.center,
                 decoration: BoxDecoration(
                   color: const Color(0xff20BEB8),
                   borderRadius: BorderRadius.circular(10),
