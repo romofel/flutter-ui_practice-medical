@@ -10,7 +10,7 @@ class VideoCallScreen extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
                     'assets/images/video_call_screen/video_doctor_backdrop.png'),
@@ -21,7 +21,7 @@ class VideoCallScreen extends StatelessWidget {
             alignment: Alignment.bottomCenter,
             child: Container(
               height: MediaQuery.of(context).size.height / 2,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
                     Color(0x99001133),
@@ -37,7 +37,7 @@ class VideoCallScreen extends StatelessWidget {
             alignment: Alignment.bottomCenter,
             child: Container(
               height: MediaQuery.of(context).size.height / 2,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
                     Color(0xff003331),
@@ -72,7 +72,7 @@ class VideoCallScreen extends StatelessWidget {
                         height: 120,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black26,
                               offset: Offset(0, 0),
