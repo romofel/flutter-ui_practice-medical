@@ -60,6 +60,26 @@ class AudioCallScreen extends StatelessWidget {
               ),
             ),
           ),
+          Center(
+            child: Container(
+              width: 100,
+              height: 120,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                boxShadow: const <BoxShadow>[
+                  BoxShadow(
+                    color: Colors.black26,
+                    offset: Offset(0, 0),
+                    blurRadius: 4.0,
+                  ),
+                ],
+              ),
+              child: Image.asset(
+                'assets/images/audio_call_screen/audio_call_avatar.png',
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
         ],
       ),
     );
