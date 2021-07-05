@@ -98,6 +98,7 @@ class VideoCallScreen extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                       ),
                     ),
+                    const SizedBox(height: 24),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 24),
                       child: Row(
@@ -130,6 +131,7 @@ class VideoCallScreen extends StatelessWidget {
                         ],
                       ),
                     ),
+                    const SizedBox(height: 24),
                     const Text(
                       'Swipe up to show chat',
                       style: TextStyle(
