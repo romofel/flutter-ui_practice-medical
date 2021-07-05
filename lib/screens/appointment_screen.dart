@@ -72,6 +72,8 @@ class AppointmentScreen extends StatelessWidget {
                       ),
                     ),
                     Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           'Voice Call',
