@@ -67,7 +67,7 @@ class AppointmentScreen extends StatelessWidget {
                       child: Center(
                         child: Image.asset(
                           'assets/images/appointment_screen/phone_icon.png',
-                          width: 23,
+                          width: 18,
                           fit: BoxFit.cover,
                         ),
                       ),
