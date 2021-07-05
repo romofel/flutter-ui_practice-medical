@@ -16,6 +16,28 @@ class VideoCallScreen extends StatelessWidget {
               ),
             ),
           ),
+          Column(
+            children: [
+              SafeArea(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  child: Row(
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).pop();
+                        },
+                        child: const Icon(
+                          Icons.arrow_back,
+                          color: Colors.white,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
