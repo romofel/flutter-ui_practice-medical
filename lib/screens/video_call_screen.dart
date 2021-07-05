@@ -86,13 +86,27 @@ class VideoCallScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               SafeArea(
                 child: Column(
                   children: [
-                    Text('05:00'),
+                    const Text(
+                      '05:00',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
                     Row(),
-                    Text('Swipe up to show chat'),
+                    const Text(
+                      'Swipe up to show chat',
+                      style: TextStyle(
+                        color: Color(0xccFFFFFF),
+                        fontSize: 12,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
                   ],
                 ),
               ),
