@@ -112,7 +112,7 @@ class ChatScreen extends StatelessWidget {
           child: Image.asset(
             image,
             fit: BoxFit.cover,
-            width: 20,
+            width: 16,
           ),
         ));
   }
