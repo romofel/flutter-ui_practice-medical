@@ -102,35 +102,24 @@ class ChatScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: ListView(
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          color: const Color(0xffF5F5F5),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: const Text(
-                          'Please lie down on your bed and unbutton your shirt so that I may check your chest',
-                          style: TextStyle(
-                            color: Color(0xb302100F),
-                            fontSize: 13,
-                            fontWeight: FontWeight.w400,
-                            height: 1.4,
-                          ),
-                        ),
+                  buildChatBlock(
+                    timestamp: '12:00 PM',
+                    chatChild: Container(
+                      padding: const EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        color: const Color(0xffF5F5F5),
+                        borderRadius: BorderRadius.circular(10),
                       ),
-                      const SizedBox(height: 8),
-                      const Text(
-                        '12:00PM',
+                      child: const Text(
+                        'Please lie down on your bed and unbutton your shirt so that I may check your chest',
                         style: TextStyle(
-                          color: Color(0x4d001133),
-                          fontSize: 10,
+                          color: Color(0xb302100F),
+                          fontSize: 13,
                           fontWeight: FontWeight.w400,
+                          height: 1.4,
                         ),
                       ),
-                    ],
+                    ),
                   ),
                 ],
               ),
@@ -191,6 +180,27 @@ class ChatScreen extends StatelessWidget {
           const SizedBox(height: 32),
         ],
       ),
+    );
+  }
+
+  Column buildChatBlock({
+    required String timestamp,
+    required Widget chatChild,
+  }) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        chatChild,
+        const SizedBox(height: 8),
+        Text(
+          timestamp,
+          style: const TextStyle(
+            color: Color(0x4d001133),
+            fontSize: 10,
+            fontWeight: FontWeight.w400,
+          ),
+        ),
+      ],
     );
   }
 
