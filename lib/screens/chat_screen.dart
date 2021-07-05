@@ -101,24 +101,27 @@ class ChatScreen extends StatelessWidget {
             child: Container(),
           ),
           SafeArea(
-            child: Row(
-              children: [
-                Container(
-                  width: 46,
-                  height: 46,
-                  decoration: BoxDecoration(
-                    color: Color(0x1a20BEB8),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Center(
-                    child: Image.asset(
-                      'assets/images/chat_screen/send_icon.png',
-                      fit: BoxFit.cover,
-                      width: 18,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Row(
+                children: [
+                  Container(
+                    width: 46,
+                    height: 46,
+                    decoration: BoxDecoration(
+                      color: Color(0x1a20BEB8),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Center(
+                      child: Image.asset(
+                        'assets/images/chat_screen/send_icon.png',
+                        fit: BoxFit.cover,
+                        width: 18,
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ],
