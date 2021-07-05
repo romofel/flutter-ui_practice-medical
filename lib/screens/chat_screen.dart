@@ -98,61 +98,66 @@ class ChatScreen extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: Container(),
+            child: Container(
+              color: Colors.red,
+              child: ListView(
+                children: [],
+              ),
+            ),
           ),
-          SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: SizedBox(
-                      height: 46,
-                      child: TextField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderSide: BorderSide.none,
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          filled: true,
-                          fillColor: const Color(0xffF5F5F5),
-                          hintText: 'Type here...',
-                          hintStyle: const TextStyle(
-                            color: Color(0x8002100F),
-                            fontSize: 12,
-                            fontWeight: FontWeight.w400,
-                          ),
-                          prefixIcon: UnconstrainedBox(
-                            child: Image.asset(
-                              'assets/images/chat_screen/paper_clip_icon.png',
-                              fit: BoxFit.cover,
-                              width: 10,
-                            ),
+          const SizedBox(height: 32),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24),
+            child: Row(
+              children: [
+                Expanded(
+                  child: SizedBox(
+                    height: 46,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        filled: true,
+                        fillColor: const Color(0xffF5F5F5),
+                        hintText: 'Type here...',
+                        hintStyle: const TextStyle(
+                          color: Color(0x8002100F),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                        ),
+                        prefixIcon: UnconstrainedBox(
+                          child: Image.asset(
+                            'assets/images/chat_screen/paper_clip_icon.png',
+                            fit: BoxFit.cover,
+                            width: 10,
                           ),
                         ),
                       ),
                     ),
                   ),
-                  const SizedBox(width: 16),
-                  Container(
-                    width: 46,
-                    height: 46,
-                    decoration: BoxDecoration(
-                      color: const Color(0x1a20BEB8),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Center(
-                      child: Image.asset(
-                        'assets/images/chat_screen/send_icon.png',
-                        fit: BoxFit.cover,
-                        width: 18,
-                      ),
+                ),
+                const SizedBox(width: 16),
+                Container(
+                  width: 46,
+                  height: 46,
+                  decoration: BoxDecoration(
+                    color: const Color(0x1a20BEB8),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Center(
+                    child: Image.asset(
+                      'assets/images/chat_screen/send_icon.png',
+                      fit: BoxFit.cover,
+                      width: 18,
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
+          const SizedBox(height: 32),
         ],
       ),
     );
