@@ -54,6 +54,18 @@ class AppointmentScreen extends StatelessWidget {
                 image: 'assets/images/appointment_screen/phone_icon.png',
                 backgroundColor: const Color(0xff45B5E5),
               ),
+              buildCallMethod(
+                title: 'Video Call',
+                subtitle: 'Start video call with doctor',
+                image: 'assets/images/appointment_screen/camera_icon.png',
+                backgroundColor: const Color(0xff4DD663),
+              ),
+              buildCallMethod(
+                title: 'Message',
+                subtitle: 'Start text call with doctor',
+                image: 'assets/images/appointment_screen/chat_icon.png',
+                backgroundColor: const Color(0xffE58245),
+              ),
             ],
           ),
         ),
