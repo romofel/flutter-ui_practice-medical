@@ -121,6 +121,21 @@ class ChatScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+                  buildChatBlock(
+                    timestamp: '9:30 PM',
+                    chatChild: Row(
+                      children: [
+                        Container(
+                          width: 100,
+                          height: 125,
+                          decoration: BoxDecoration(
+                            color: Color(0x1a20BEB8),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
