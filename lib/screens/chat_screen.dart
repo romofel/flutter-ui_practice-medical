@@ -9,7 +9,8 @@ class ChatScreen extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            padding: const EdgeInsets.only(top: 54, left: 24, right: 24),
+            padding:
+                const EdgeInsets.only(top: 54, bottom: 16, left: 24, right: 24),
             decoration: const BoxDecoration(
               color: Color(0x80FFFFFF),
               borderRadius: BorderRadius.only(
