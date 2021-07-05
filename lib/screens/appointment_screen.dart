@@ -1,3 +1,4 @@
+import 'package:app/screens/video_call_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppointmentScreen extends StatelessWidget {
@@ -69,20 +70,26 @@ class AppointmentScreen extends StatelessWidget {
                 backgroundColor: const Color(0xffE58245),
               ),
               const Spacer(),
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.symmetric(vertical: 14),
-                alignment: AlignmentDirectional.center,
-                decoration: BoxDecoration(
-                  color: const Color(0xff20BEB8),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: const Text(
-                  'Continue',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w500,
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const VideoCallScreen()));
+                },
+                child: Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.symmetric(vertical: 14),
+                  alignment: AlignmentDirectional.center,
+                  decoration: BoxDecoration(
+                    color: const Color(0xff20BEB8),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const Text(
+                    'Continue',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
               ),
