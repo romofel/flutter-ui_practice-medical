@@ -107,9 +107,14 @@ class ChatScreen extends StatelessWidget {
                 children: [
                   Expanded(
                     child: TextField(
-                      decoration: InputDecoration(),
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        filled: true,
+                        fillColor: Color(0xffF5F5F5),
+                      ),
                     ),
                   ),
+                  const SizedBox(width: 16),
                   Container(
                     width: 46,
                     height: 46,
