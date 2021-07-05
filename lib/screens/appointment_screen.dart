@@ -50,6 +50,7 @@ class AppointmentScreen extends StatelessWidget {
               const SizedBox(height: 32),
               Container(
                 height: 70,
+                padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
@@ -71,6 +72,7 @@ class AppointmentScreen extends StatelessWidget {
                         ),
                       ),
                     ),
+                    const SizedBox(width: 16),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -83,6 +85,7 @@ class AppointmentScreen extends StatelessWidget {
                             fontWeight: FontWeight.w400,
                           ),
                         ),
+                        const SizedBox(height: 4),
                         Text(
                           'Start voice call with doctor',
                           style: TextStyle(
