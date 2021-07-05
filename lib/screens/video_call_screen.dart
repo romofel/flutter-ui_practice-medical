@@ -107,6 +107,13 @@ class VideoCallScreen extends StatelessWidget {
                             shape: BoxShape.circle,
                             color: Color(0x4dFFFFFF),
                           ),
+                          child: Center(
+                            child: Image.asset(
+                              'assets/images/video_call_screen/video_bar_icon.png',
+                              width: 18,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
                         ),
                       ],
                     ),
