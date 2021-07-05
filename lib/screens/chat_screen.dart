@@ -1,3 +1,4 @@
+import 'package:app/screens/audio_call_screen.dart';
 import 'package:flutter/material.dart';
 
 class ChatScreen extends StatelessWidget {
@@ -78,11 +79,18 @@ class ChatScreen extends StatelessWidget {
                   ],
                 ),
                 const Spacer(),
-                buildAppBarButton(
+                buildAppBarButton(context,
                     image:
-                        'assets/images/chat_screen/appointment_phone_icon.png'),
+                        'assets/images/chat_screen/appointment_phone_icon.png',
+                    onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const AudioCallScreen(),
+                    ),
+                  );
+                }),
                 const SizedBox(width: 12),
-                buildAppBarButton(
+                buildAppBarButton(context,
                     image:
                         'assets/images/chat_screen/appointment_video_icon.png'),
               ],
@@ -306,22 +314,27 @@ class ChatScreen extends StatelessWidget {
     );
   }
 
-  Container buildAppBarButton({
+  GestureDetector buildAppBarButton(
+    BuildContext context, {
     required String image,
+    VoidCallback? onTap,
   }) {
-    return Container(
-        width: 40,
-        height: 40,
-        decoration: const BoxDecoration(
-          shape: BoxShape.circle,
-          color: Color(0x1a20BEB8),
-        ),
-        child: Center(
-          child: Image.asset(
-            image,
-            fit: BoxFit.cover,
-            width: 16,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+          width: 40,
+          height: 40,
+          decoration: const BoxDecoration(
+            shape: BoxShape.circle,
+            color: Color(0x1a20BEB8),
           ),
-        ));
+          child: Center(
+            child: Image.asset(
+              image,
+              fit: BoxFit.cover,
+              width: 16,
+            ),
+          )),
+    );
   }
 }
