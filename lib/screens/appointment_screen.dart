@@ -48,6 +48,24 @@ class AppointmentScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 32),
+              Container(
+                height: 70,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Row(
+                  children: [
+                    Container(),
+                    Column(
+                      children: [
+                        Text('Voice Call'),
+                        Text('Start voice call with doctor'),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
