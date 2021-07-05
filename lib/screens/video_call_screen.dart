@@ -98,33 +98,37 @@ class VideoCallScreen extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                       ),
                     ),
-                    Row(
-                      children: [
-                        buildCallOptionButton(
-                          image:
-                              'assets/images/video_call_screen/video_bar_icon.png',
-                        ),
-                        buildCallOptionButton(
-                          image:
-                              'assets/images/video_call_screen/mic_bar_icon.png',
-                        ),
-                        buildCallOptionButton(
-                          image:
-                              'assets/images/video_call_screen/phone_bar_icon.png',
-                          backgroundColor: const Color(0xffFF5656),
-                          width: 70,
-                          height: 70,
-                          imageWidth: 20,
-                        ),
-                        buildCallOptionButton(
-                          image:
-                              'assets/images/video_call_screen/camera_bar_icon.png',
-                        ),
-                        buildCallOptionButton(
-                          image:
-                              'assets/images/video_call_screen/chat_bar_icon.png',
-                        ),
-                      ],
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 24),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          buildCallOptionButton(
+                            image:
+                                'assets/images/video_call_screen/video_bar_icon.png',
+                          ),
+                          buildCallOptionButton(
+                            image:
+                                'assets/images/video_call_screen/mic_bar_icon.png',
+                          ),
+                          buildCallOptionButton(
+                            image:
+                                'assets/images/video_call_screen/phone_bar_icon.png',
+                            backgroundColor: const Color(0xffFF5656),
+                            width: 70,
+                            height: 70,
+                            imageWidth: 20,
+                          ),
+                          buildCallOptionButton(
+                            image:
+                                'assets/images/video_call_screen/camera_bar_icon.png',
+                          ),
+                          buildCallOptionButton(
+                            image:
+                                'assets/images/video_call_screen/chat_bar_icon.png',
+                          ),
+                        ],
+                      ),
                     ),
                     const Text(
                       'Swipe up to show chat',
