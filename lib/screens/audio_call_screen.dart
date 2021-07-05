@@ -80,7 +80,96 @@ class AudioCallScreen extends StatelessWidget {
               ),
             ),
           ),
+          Positioned(
+            bottom: 56,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width - 48,
+                child: Column(
+                  children: [
+                    const Text(
+                      '05:00',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    const SizedBox(height: 24),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        buildCallOptionButton(
+                          image:
+                              'assets/images/video_call_screen/video_bar_icon.png',
+                        ),
+                        buildCallOptionButton(
+                          image:
+                              'assets/images/video_call_screen/mic_bar_icon.png',
+                        ),
+                        buildCallOptionButton(
+                          image:
+                              'assets/images/video_call_screen/phone_bar_icon.png',
+                          backgroundColor: const Color(0xffFF5656),
+                          width: 70,
+                          height: 70,
+                          imageWidth: 20,
+                        ),
+                        buildCallOptionButton(
+                          image:
+                              'assets/images/video_call_screen/camera_bar_icon.png',
+                        ),
+                        buildCallOptionButton(
+                          image:
+                              'assets/images/video_call_screen/chat_bar_icon.png',
+                          onTap: () {},
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 24),
+                    const Text(
+                      'Swipe up to show chat',
+                      style: TextStyle(
+                        color: Color(0xccFFFFFF),
+                        fontSize: 12,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
         ],
+      ),
+    );
+  }
+
+  GestureDetector buildCallOptionButton({
+    required String image,
+    double width = 54,
+    double height = 54,
+    double imageWidth = 18,
+    Color backgroundColor = const Color(0x4dFFFFFF),
+    VoidCallback? onTap,
+  }) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: width,
+        height: height,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: backgroundColor,
+        ),
+        child: Center(
+          child: Image.asset(
+            image,
+            width: imageWidth,
+            fit: BoxFit.cover,
+          ),
+        ),
       ),
     );
   }
