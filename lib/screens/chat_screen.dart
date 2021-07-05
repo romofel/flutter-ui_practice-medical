@@ -121,6 +121,7 @@ class ChatScreen extends StatelessWidget {
                           ),
                         ),
                       ),
+                      const SizedBox(height: 8),
                       const Text(
                         '12:00PM',
                         style: TextStyle(
