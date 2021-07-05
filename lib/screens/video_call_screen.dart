@@ -111,6 +111,10 @@ class VideoCallScreen extends StatelessWidget {
                         buildCallOptionButton(
                           image:
                               'assets/images/video_call_screen/phone_bar_icon.png',
+                          backgroundColor: const Color(0xffFF5656),
+                          width: 70,
+                          height: 70,
+                          imageWidth: 20,
                         ),
                         buildCallOptionButton(
                           image:
