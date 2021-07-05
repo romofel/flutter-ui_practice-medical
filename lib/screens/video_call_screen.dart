@@ -100,20 +100,9 @@ class VideoCallScreen extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Container(
-                          width: 54,
-                          height: 54,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Color(0x4dFFFFFF),
-                          ),
-                          child: Center(
-                            child: Image.asset(
+                        buildCallOptionButton(
+                          image:
                               'assets/images/video_call_screen/video_bar_icon.png',
-                              width: 18,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
                         ),
                       ],
                     ),
@@ -131,6 +120,30 @@ class VideoCallScreen extends StatelessWidget {
             ],
           ),
         ],
+      ),
+    );
+  }
+
+  Container buildCallOptionButton({
+    required String image,
+    double width = 54,
+    double height = 54,
+    double imageWidth = 18,
+    Color backgroundColor = const Color(0x4dFFFFFF),
+  }) {
+    return Container(
+      width: width,
+      height: height,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: backgroundColor,
+      ),
+      child: Center(
+        child: Image.asset(
+          image,
+          width: imageWidth,
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }
