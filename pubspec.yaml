@@ -66,6 +66,7 @@ flutter:
     - assets/images/confirmation_screen/
     - assets/images/appointment_screen/
     - assets/images/video_call_screen/
+    - assets/images/chat_screen/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
