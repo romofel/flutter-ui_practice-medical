@@ -317,6 +317,10 @@ class DoctorScreen extends StatelessWidget {
                                                     title: 'Cancel',
                                                     foregroundColor:
                                                         const Color(0xb302100F),
+                                                    onTap: () {
+                                                      Navigator.of(context)
+                                                          .pop();
+                                                    },
                                                   ),
                                                   buildDialogButton(
                                                     title: 'Pay Advance',
