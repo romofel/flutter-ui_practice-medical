@@ -101,7 +101,16 @@ class ChatScreen extends StatelessWidget {
             child: Container(
               color: Colors.red,
               child: ListView(
-                children: [],
+                children: [
+                  Column(
+                    children: [
+                      Container(
+                          child: Text(
+                              'Please lie down on your bed and unbutton your shirt so that I may check your chest')),
+                      Text('12:00PM'),
+                    ],
+                  ),
+                ],
               ),
             ),
           ),
