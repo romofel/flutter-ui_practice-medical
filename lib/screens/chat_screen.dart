@@ -51,9 +51,11 @@ class ChatScreen extends StatelessWidget {
                     ),
                   ],
                 ),
+                const Spacer(),
                 buildAppBarButton(
                     image:
                         'assets/images/chat_screen/appointment_phone_icon.png'),
+                const SizedBox(width: 12),
                 buildAppBarButton(
                     image:
                         'assets/images/chat_screen/appointment_video_icon.png'),
