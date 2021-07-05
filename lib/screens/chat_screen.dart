@@ -48,7 +48,7 @@ class ChatScreen extends StatelessWidget {
                     Container(
                       width: 11,
                       height: 11,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Color(0xff12C719),
                         shape: BoxShape.circle,
                       ),
@@ -106,25 +106,28 @@ class ChatScreen extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                          borderSide: BorderSide.none,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        filled: true,
-                        fillColor: Color(0xffF5F5F5),
-                        hintText: 'Type here...',
-                        hintStyle: TextStyle(
-                          color: Color(0x8002100F),
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400,
-                        ),
-                        prefixIcon: UnconstrainedBox(
-                          child: Image.asset(
-                            'assets/images/chat_screen/paper_clip_icon.png',
-                            fit: BoxFit.cover,
-                            width: 10,
+                    child: SizedBox(
+                      height: 46,
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide.none,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          filled: true,
+                          fillColor: const Color(0xffF5F5F5),
+                          hintText: 'Type here...',
+                          hintStyle: const TextStyle(
+                            color: Color(0x8002100F),
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                          ),
+                          prefixIcon: UnconstrainedBox(
+                            child: Image.asset(
+                              'assets/images/chat_screen/paper_clip_icon.png',
+                              fit: BoxFit.cover,
+                              width: 10,
+                            ),
                           ),
                         ),
                       ),
@@ -135,7 +138,7 @@ class ChatScreen extends StatelessWidget {
                     width: 46,
                     height: 46,
                     decoration: BoxDecoration(
-                      color: Color(0x1a20BEB8),
+                      color: const Color(0x1a20BEB8),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Center(
