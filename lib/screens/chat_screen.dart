@@ -105,9 +105,13 @@ class ChatScreen extends StatelessWidget {
                   Column(
                     children: [
                       Container(
-                          child: Text(
+                          decoration: BoxDecoration(
+                            color: const Color(0xffF5F5F5),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: const Text(
                               'Please lie down on your bed and unbutton your shirt so that I may check your chest')),
-                      Text('12:00PM'),
+                      const Text('12:00PM'),
                     ],
                   ),
                 ],
