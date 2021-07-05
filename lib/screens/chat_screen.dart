@@ -105,6 +105,11 @@ class ChatScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: Row(
                 children: [
+                  Expanded(
+                    child: TextField(
+                      decoration: InputDecoration(),
+                    ),
+                  ),
                   Container(
                     width: 46,
                     height: 46,
