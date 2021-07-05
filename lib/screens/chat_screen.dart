@@ -106,6 +106,7 @@ class ChatScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
+                        padding: const EdgeInsets.all(16),
                         decoration: BoxDecoration(
                           color: const Color(0xffF5F5F5),
                           borderRadius: BorderRadius.circular(10),
@@ -116,6 +117,7 @@ class ChatScreen extends StatelessWidget {
                             color: Color(0xb302100F),
                             fontSize: 13,
                             fontWeight: FontWeight.w400,
+                            height: 1.4,
                           ),
                         ),
                       ),
