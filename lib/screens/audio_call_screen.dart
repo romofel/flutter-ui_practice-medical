@@ -6,9 +6,19 @@ class AudioCallScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Stack(
-            children: [],
-        ),
+      body: Stack(
+        children: [
+          Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                  'assets/images/video_call_screen/video_doctor_backdrop.png',
+                ),
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
