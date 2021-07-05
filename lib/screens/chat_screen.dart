@@ -88,7 +88,15 @@ class ChatScreen extends StatelessWidget {
               ],
             ),
           ),
-          const Text('Today'),
+          const SizedBox(height: 8),
+          const Text(
+            'Today',
+            style: TextStyle(
+              color: Color(0x4d02100F),
+              fontSize: 10,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
           Expanded(
             child: Container(),
           ),
